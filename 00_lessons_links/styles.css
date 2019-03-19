@@ -44,6 +44,8 @@
 }
 
 @media screen and (max-width: 999px) {
+  .lessons .enhancement,
+  .lessons .lab,
   .lessons .lesson {
     min-width: 0;
     max-width: none;
