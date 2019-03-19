@@ -1,13 +1,13 @@
 /* Read these lines and figure what's selected  */
-div p, section h1
-div > p, section h1
-.div, .span
-#thing, #other_thing
-#thing #other_thing
-#thing > #other_thing
-.student:hover
+div p, section h1 {}
+div > p, section h1 {}
+.div, .span {}
+#thing, #other_thing {}
+#thing #other_thing {}
+#thing > #other_thing {}
+.student:hover {}
 section#shop nav :hover {color: green }
 nav :hover {color: green }
-#shop + .btn
-#shop ~ .btn
-#shop nav *
+#shop + .btn {}
+#shop ~ .btn {}
+#shop nav * {}
