@@ -71,11 +71,21 @@ body {
 
 .blocks.float .block {
   background: orange;
-  float: left;
+  /* float: left; */
   line-height: 100px;
   text-align: center;
   width: calc((100% / 3) - (20px / 3)); 
-  /* above  */
+}
+
+.blocks.float .block:not(.unfloat) {
+  float: left;
+}
+
+.blocks.float .block.unfloat {
+  background: red;
+  width: 100%;
+  margin-top: 10px;
+  clear: left;
 }
 
 .blocks.float + .blocks {
