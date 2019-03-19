@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IH-125 | CSS Siblings</title>
     <style>
-        .students.list {
-            list-style-type: none;
+        body {
+            font-family: Avenir;
         }
         .student.details {
             color: darkorange;
@@ -16,11 +16,12 @@
             text-transform: uppercase;
         }
        .students.list ~ .student.details {
-            font-weight: bold;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
+    <!-- below: EMMET SNIPPET -->
     <!-- (ul.students.list>li.student*3)+(p.student.details) -->
     <ul class="students list">
         <li class="student">Jill Foo</li>
@@ -36,7 +37,7 @@
     <p class="student details">
         I'm Emmy Bar, age 43
     </p>
-    <div id="divider"> IM THE DIVIDER </div>
+    <div id="divider"> IM THE DIVIDER => NOFX ON the ~ selector</div>
     <p class="student details">
         I'm Emmy Bar, age 43
     </p>
