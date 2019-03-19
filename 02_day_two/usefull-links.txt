@@ -1,0 +1,5 @@
+# CSS round 2, pseudo classes (like :hover or :empty)
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+#good book ; )
+https://www.amazon.fr/Hacker-Ethic-Linus-Torvalds/dp/0436205505
