@@ -1,8 +1,33 @@
+--------------- MORNING : REVIEWS AND GIT Basics---------------
+
 # CSS round 2, pseudo classes (like :hover or :empty)
 https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 # CSS inheritance
 https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance
 
-#good book ; )
+# GIT Overview (20 minutes video)
+https://www.youtube.com/watch?v=Y9XZQO1n_7c
+
+# a good book about hacker culture ;)
 https://www.amazon.fr/Hacker-Ethic-Linus-Torvalds/dp/0436205505
+
+
+--------------- AFTERNOON : JS BASICS I ---------------
+
+#ECMAScript git repo 
+https://github.com/tc39
+
+# modulo operator
+https://www.youtube.com/watch?v=b5cb_nfDyyM
+
+# JS | usefull books
+
+# JS, The good parts by Douglas Crockford:
+http://shop.oreilly.com/product/9780596517748.do
+
+# JS, The definitive guide:
+http://shop.oreilly.com/product/9780596805531.do
+
+# hacker jargon and slang
+http://catb.org/jargon/html/
