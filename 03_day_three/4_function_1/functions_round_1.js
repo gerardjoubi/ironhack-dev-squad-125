@@ -16,18 +16,6 @@ function drill(mode) {
     return message;
 }
 
-function drill2(mode) {
-    var message;
-    try {
-        if (!)
-        if (mode) message = "drill";
-        else message = "pause";
-        return message;
-    } catch(err) {
-
-    }
-}
-
 // const res = drill();
 // console.log(res); // ???
 
@@ -56,6 +44,7 @@ var z = foo();
 // z === 23
 
 console.log(x === y && y === z); //true
+console.log(x === y === z); //true
 
 // modify this function
 // if the result is NaN, return an Error
