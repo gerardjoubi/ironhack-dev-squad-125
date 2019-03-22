@@ -7,6 +7,7 @@ function f() {
     console.log(user); // user object
     console.log("=====================\n");
   }
+  
   function fb() {
     var a = true;
     console.log("a in fb equals : " + a); // true
