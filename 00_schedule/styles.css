@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-family: Avenir;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.title {
+  margin: 0 0 10px;
+}
+
+.text-content {
+  margin: 20px 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.lessons {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 840px;
+  flex-wrap: wrap;
+}
+
+.lessons .item {
+  border: 1px solid darkgray;
+  border-radius: 0.4rem;
+  display: flex;
+  min-width: 200px;
+  max-width: 200px;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-between;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 20px 10px 20px 10px;
+}
+
+@media screen and (max-width: 999px) {
+  .lessons .enhancement,
+  .lessons .lab,
+  .lessons .lesson {
+    min-width: 0;
+    max-width: none;
+    flex: 0 0 100%;
+  }
+}
+
+.lessons .item .title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.lessons .item .title::before {
+  border-radius: 0.4rem;
+  color: white;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 100;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: text-top;
+  width: 30px;
+}
+
+.lessons .lesson.css .title::before {
+  background: #0079be;
+  content: "css";
+}
+
+.lessons .lesson.js .title::before {
+  background: #f1d600;
+  content: "js";
+}
+
+.lessons .lesson.html .title::before {
+  background: #ff9f19;
+  content: "html";
+}
+
+.lessons .item.lab .title::before {
+  background: #c377e0;
+  content: "lab";
+}
+
+.lessons .item.self .title::before {
+  background: #62bd4f;
+  content: "self";
+}
+
+.lessons .item.enhancement .title::before {
+  background: #50e898;
+  content: "more";
+}
