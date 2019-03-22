@@ -1,0 +1,96 @@
+============================
+# CSS selectors... again ;)
+============================
+
+select
+select option
+select option:checked
+.is-selected, .is-active
+#header .link, #footer .link
+#content_main + #sidebar
+article#content_main:hover
+#todo:empty
+#todo .item
+#todo > .item
+.nav .link.is-active
+:not(.is-selected)
+
+
+============================
+# padding, margins
+============================
+
+padding: 10px;
+margin: 20px;
+margin: 20px auto;
+margin: 10px 20px 50px 20px;
+padding: 10px 0 50px;
+padding: 10px 50px;
+margin: 0 0 60px;
+
+
+============================
+# JS quizz
+============================
+
+1/ JS typing is                                   => "loose" || "strong"
+2/ JS has been created by                         => "Crockford" || "Eich"
+3/ JS can only runs on browser                    => true || false
+4/ JavaScript is an implementation of ECMAScript  => true || false
+5/ "ECMASCRIPT" === 'JavaScript'                  => true || false
+6/ Boolean(0) gives  ...                          => true || false
+7/ NaN is of type number                          => true || false
+8/ [].length === 1                                => true || false
+9/ TypeScript is a superset of JS                 => true || false
+10/ typeof {} === typeof []                       => true || false
+
+
+============================
+# labels, values
+============================
+var foo = "baz";
+var bar = "baz";
+
+foo === bar  ?  "yes" : "no" 
+
+
+============================
+# Objects
+============================
+
+var cat = {
+    name: "Kitty",
+    age: 6,
+    colors: ["black", "white"],
+    eyeColor: "green",
+    isCute: true,
+    favoriteToy: null
+};
+
+1/ what is logged here  ? => console.log(cat.iscute);
+
+2/ Imagine an object (value) to fill favoriteToy (key)
+
+console.log(cat.name === cat['name'])
+
+hint: you may access an object value through direct indexing
+
+============================
+# A word on about var names
+============================
+
+You can pick wathever name you want (try to choose explicit labels though)
+... EXCEPT reserved words :
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
+
+
+============================
+# A word about config
+============================
+
+- about dev tools
+Please ensure to use this setting => disable cache while devtools is open
+Lite-server takes care of it but... we never know ; )
+
+- for windows user
+Please ensure your file explorer shows the file extensions

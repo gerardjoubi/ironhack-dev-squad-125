@@ -1,0 +1,31 @@
+# npm : lite-server, first downloaded tool
+https://nodejs.org/en/
+https://www.npmjs.com/
+https://www.npmjs.com/package/lite-server
+
+# emmet 
+https://emmet.io/
+
+#css selectors
+https://flukeout.github.io/
+https://developer.mozilla.org/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS
+http://www.marevueweb.com/css-html/liste-nth-child-propriete/
+
+
+#all HTML tags docs
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+#flexbox
+https://flexboxfroggy.com/
+
+
+#bonuses 
+
+# CSS theory
+http://oocss.org/
+
+#preview grid
+https://cssgridgarden.com/
+
+# node : Know your REPL
+https://hackernoon.com/know-node-repl-better-dbd15bca0af6
