@@ -1,4 +1,7 @@
+console.log("-----------------------\n@s.copesjs\n-----------------------");
 function f() {
+  "use strict";
+
   var a = "i'm defined in parent scope (f)";
 
   function fa() {
@@ -30,3 +33,8 @@ function f() {
 }
 
 f();
+// auto executed variation
+const ff = (function ff() {
+  "use strict";
+  console.log("hello IIFE :)");
+}());
