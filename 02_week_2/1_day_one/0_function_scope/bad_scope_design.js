@@ -12,6 +12,7 @@ console.log("1/ yes yes yes", this === window, "---------\n", this, window);
 function isProtection() {
   console.log("\n2/ yes this is global object", this === window);
   var wontBeChecked = "i'm protected as any value scoped to a function";
+
   console.log(globalVarToo); // accessible from global scope
 }
 
@@ -26,3 +27,4 @@ function isEvenBetterProtection() {
 /* let's run it  */
 isProtection();
 isEvenBetterProtection();
+

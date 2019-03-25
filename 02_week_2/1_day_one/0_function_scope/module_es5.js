@@ -2,8 +2,9 @@
 console.log("-----------------------\n@module_es5.js\n-----------------------");
 const ff = (function ff() {
     "use strict";
-    
+    // closure
     const author = "gui";
+    const secret = "my secret no one has to know";
     const version = "0.0.0";
 
     function getNow() {
