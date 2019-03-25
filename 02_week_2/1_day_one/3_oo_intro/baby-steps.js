@@ -1,3 +1,6 @@
+/* this baby step patter can work but will quickly seems cumbersome */
+/* we can provide a better way with class (es6) (previously constructor functions in es5) */
+
 const user = {
     firstName: "gui",
     lastName: "amg",

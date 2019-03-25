@@ -1,3 +1,7 @@
+/*
+    This snipper will give you a better understanding of prototypal inheritance
+*/
+
 console.log("-----------------------\n@classes.js\n-----------------------");
 
 class X {}
@@ -26,35 +30,3 @@ console.log(
 
 );
 console.log("-----------------------Some more\n-----------------------");
-
-class Animal {
-    constructor(species) {
-        this.species = species;
-    }
-    getSpecies() {
-        return this.species;
-    }
-    move() {
-        return "I'm an animal, therefore I can move";
-    }
-}
-
-class Fish extends Animal {
-    constructor(species) {
-        super(species);
-        this.naturalHabitat = "ocean"
-    }
-    swim() {
-        return `${this.species} can swim`;
-    }
-}
-
-console.log("--------------------------\n");
-const dog = new Animal("french bulldog");
-console.log(dog);
-console.log(dog.getSpecies());
-console.log("--------------------------\n");
-const shark = new Fish("hammer head");
-console.log(shark);
-console.log(shark.swim());
-console.log(shark.getSpecies());
