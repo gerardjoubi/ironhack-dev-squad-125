@@ -1,0 +1,17 @@
+https://nodeschool.io/
+
+javascripting / begin
+tower of babel / es6, new syntax
+learn you node / a basic
+planet proto /
+stream adventure / flux stream and more 
+functionnal javascript / fun fun functions
+count to 6 / 
+scope chains & closures / 
+regex adventure / 
+promise won't hurt you/
+
+etc...
+
+////
+learn you react + react server side
