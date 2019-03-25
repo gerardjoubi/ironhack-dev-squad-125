@@ -34,6 +34,9 @@ class Animal {
     getSpecies() {
         return this.species;
     }
+    move() {
+        return "I'm an animal, therefore I can move";
+    }
 }
 
 class Fish extends Animal {
@@ -46,9 +49,12 @@ class Fish extends Animal {
     }
 }
 
+console.log("--------------------------\n");
 const dog = new Animal("french bulldog");
 console.log(dog);
 console.log(dog.getSpecies());
+console.log("--------------------------\n");
 const shark = new Fish("hammer head");
 console.log(shark);
 console.log(shark.swim());
+console.log(shark.getSpecies());

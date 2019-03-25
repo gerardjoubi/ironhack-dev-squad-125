@@ -1,38 +1,58 @@
 function HoverCraft(p) {
-    if (!(this instanceof HoverCraft)) throw new Error("Please call HoverCraft as a constructor");
-    this.name = p.name;
-    this.captain = p.captain;
-    this.crewCount = p.crewCount;
-    this.coreTechno = p.coreTechno;
+  if (!(this instanceof HoverCraft)) throw new Error("Please call HoverCraft as a constructor");
+  this.name = p.name;
+  this.reactorCount = p.reactorCount;
+  this.captain = p.captain || "default captain";
+  this.crewCount = p.crewCount || 0;
+  this.coreTechno = p.coreTechno;
+  // return this; // in constructor, you don't have to return thios, cause it's default behaviour
 }
+
+HoverCraft.prototype.land = function() {
+    return "SWWOOOOOOSH " + this.name + " is landing !!!";
+};
 
 HoverCraft.prototype.start = function() {
-    return `${this.name} is starting`;
+  return "VROOOOM " + this.name + " is starting up !!!!";
 };
 
-HoverCraft.prototype.landing = function() {
-    return `${this.name} is landing`;
-};
+var ship, falcon;
 
-HoverCraft.prototype.getCrewCount = function() {
-    return this.crewCount;
-};
-
-const blankShip = new HoverCraft({});
-console.log(blankShip); // {}
-console.log(Object.getPrototypeOf(blankShip)); // Object
-//  console.log(blankShip.choobidoo); // undefined
-
-var ship;
 try {
-    ship = new HoverCraft({
-        name: "Nebuchadnezzar",
-        captain: "Morpheus",
-        crewCount: 9,
-        coreTechno: "atomic"
-    });
+  ship = new HoverCraft({
+    name: "Nebuchadnezzar",
+    captain: "Morpheus",
+    crewCount: 9,
+    coreTechno: "atomic"
+  });
+  falcon = new HoverCraft({
+    name: "Millennium Falcon",
+    captain: "Han Solo",
+    crewCount: 5,
+    coreTechno: null,
+    toto: true
+  });
 } catch (err) {
-    console.warn(err);
+  console.warn("we catched errors", err);
 }
-console.log(ship);
 
+console.log("time to start the engines ====>");
+console.log(ship.start());
+console.log(falcon.start());
+
+// console.log("1 ship ====>");
+// console.log(ship);
+// console.log("2 falcon ====>");
+// console.log(falcon);
+
+// HoverCraft.prototype.start = function() {
+//     return `${this.name} is starting`;
+// };
+
+// HoverCraft.prototype.landing = function() {
+//     return `${this.name} is landing`;
+// };
+
+// HoverCraft.prototype.getCrewCount = function() {
+//     return this.crewCount;
+// };
