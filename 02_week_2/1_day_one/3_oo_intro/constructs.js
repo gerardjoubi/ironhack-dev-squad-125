@@ -1,5 +1,5 @@
 function HoverCraft(p) {
-  if (!(this instanceof HoverCraft)) throw new Error("Please call HoverCraft as a constructor");
+  if (!(this instanceof HoverCraft)) throw new Error("Please call HoverCraft as constructor (new keyword missing");
   this.name = p.name;
   this.reactorCount = p.reactorCount;
   this.captain = p.captain || "default captain";
@@ -39,20 +39,3 @@ try {
 console.log("time to start the engines ====>");
 console.log(ship.start());
 console.log(falcon.start());
-
-// console.log("1 ship ====>");
-// console.log(ship);
-// console.log("2 falcon ====>");
-// console.log(falcon);
-
-// HoverCraft.prototype.start = function() {
-//     return `${this.name} is starting`;
-// };
-
-// HoverCraft.prototype.landing = function() {
-//     return `${this.name} is landing`;
-// };
-
-// HoverCraft.prototype.getCrewCount = function() {
-//     return this.crewCount;
-// };
