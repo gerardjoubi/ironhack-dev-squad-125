@@ -1,7 +1,0 @@
-instalm process =>
-
-1/ npm init
-2/ npm install --save jquery
-3/ npm i --save bootstrap
-
-note: npm i is shortcut for npm install
