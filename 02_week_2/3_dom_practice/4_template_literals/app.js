@@ -1,15 +1,9 @@
 
 
-function productRow(strings, personExp, ageExp) {
+function productRow(strings, productExp, priceExp) {
     var str0 = strings[0]; // "That "
     var str1 = strings[1]; // " is a "
-    var ageStr;
-    if (ageExp > 99) {
-        ageStr = 'centenarian';
-    } else {
-        ageStr = 'youngster';
-    }
-    // We can even return a string built using a template literal
+
     return `<div></div>}`;
 }
 
