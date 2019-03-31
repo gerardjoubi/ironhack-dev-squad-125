@@ -5,8 +5,6 @@ canvas.height = canvas.scrollHeight; // get drawing surface height set in css
 
 const ctx = canvas.getContext("2d");
 
-
-
 // NOTE : canvas uses a cartesian coordinate system ... with a twist to remember !
 
 // ****************************
@@ -35,9 +33,9 @@ ctx.lineWidth = 4; // define a line width
 ctx.strokeStyle = "#2ECC40"; // pick a new stroke color
 ctx.strokeRect(590, 70, 140, 140); // draw a stroked square at this x/Y position + h/w metrics
 
-// The canvas API Gives provides a function to draw rectangles/squares
+// The canvas API provides a function to draw rectangles/squares
 // It would be nice if we could have the same for every possible shapes.
-// But it's not possible so we would have to do some work to make it happends.
+// But it's not possible so we have to do some work to make it happend.
 
 // ****************************
 // shapes: path (generic construct)
@@ -66,7 +64,7 @@ ctx.moveTo(20, 250);
 ctx.lineTo(250, 250);
 // stroke() executes the drawing
 ctx.stroke();
-// move the pen to x=250, y=250...
+// move the pen to x=250, y=248...
 ctx.moveTo(250, 248);
 // start a new line from these coordinates: x=250, y=400 ...
 ctx.lineTo(250, 400); // to these coords : x:250, y:400
