@@ -1,9 +1,12 @@
 https://www.youtube.com/watch?v=IwpBluLjynI
 https://nodeschool.io/
 
+
+------beginners
 javascripting / begin
-tower of babel / es6, new syntax
 learn you node / a basic
+----------
+tower of babel / es6, new syntax
 planet proto /
 stream adventure / flux stream and more 
 functionnal javascript / fun fun functions
