@@ -1,0 +1,22 @@
+{{> head }}
+{{> navbar }}
+<h1 class="title">{{title}}</h1>
+<form id="form_contact" action="contact" class="form">
+    {{!-- <form id="form_contact" method="post" action="contact" class="form"> --}}
+    <label for="name" class="label">name</label>
+    <input id="name" type="text" name="name" class="input" value="test name" required>
+    <label for="email" class="label">email</label>
+    <input id="email" type="email" name="email" class="input" value="test@test.com" required>
+    <label for="subject" class="label">what's up?</label>
+    <select id="subject" name="subject" class="select input">
+        <option value="support">get support</option>
+        <option value="meeting">meet us</option>
+        <option value="pricing">get pricing</option>
+    </select>
+    <label for="message" class="label">what's up?</label>
+    <textarea id="message" name="message" class="textarea" required>test message</textarea>
+    <button id="send_message" class="btn small">send</button>
+</form>
+</body>
+
+</html>

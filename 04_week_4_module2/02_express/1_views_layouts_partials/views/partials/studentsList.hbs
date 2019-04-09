@@ -1,0 +1,16 @@
+<h2 class="title">Students</h2>
+<ul class="list students">
+    {{#each students}}
+    <li>
+        <span class="count">{{@index}}</span>
+        <span>{{this.name}}</span>
+        <span> - </span>
+        <span>{{this.age}}</span>
+        {{#unless this.email}}
+        <span class="warning">warning, no email provided</span>
+        {{/unless}}
+    </li>
+    {{else}}
+    <li>No registered students yet!</li>
+    {{/each}}
+</ul>

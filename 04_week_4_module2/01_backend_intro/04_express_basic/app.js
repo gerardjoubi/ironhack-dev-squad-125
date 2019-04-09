@@ -3,6 +3,7 @@ const app = express(); // app is an object returned by the express func executio
 
 // app sets public folder ressources as accessible : mandatory if clients must access some static resources, such as images or css and front end scripts...
 app.use(express.static("public"));
+// app.use(express.static(__dirname + "/public"));
 
 // on the base route (http://localhost:3010/), listen to get request coming from server
 app.get("/", (request, response) => { // clbk parameters are mandatory

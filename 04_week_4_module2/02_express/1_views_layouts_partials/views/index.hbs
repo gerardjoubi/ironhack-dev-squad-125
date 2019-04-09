@@ -1,0 +1,30 @@
+{{> head }}
+
+{{> navbar }}
+
+{{#if title}}
+<h1 class="title">{{title}}</h1>
+{{else}}
+<h1 class="title">Home of hbs !</h1>
+{{/if}}
+<h2 class="title">{{message }}</h2>
+<p>today : {{ myMood }}
+    {{ yang }}<br>
+    {{ boolRes }}<br>
+    {{{ markup }}}<br>
+</p>
+<hr>
+<p>
+    {{{ markup }}} : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam quas eius laudantium placeat
+    dignissimos consequuntur corporis delectus ad! Recusandae, eius repudiandae vitae rerum eos accusantium inventore
+    possimus asperiores aperiam cupiditate.
+</p>
+<p>
+    link to hbs doc : https://handlebarsjs.com/
+</p>
+{{!-- let me call a view partial --}}
+{{!-- partials are reusable widgets --}}
+{{> studentsList }}
+</body>
+
+</html>
