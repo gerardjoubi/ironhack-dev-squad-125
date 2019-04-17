@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const userModel = require("./../models/user");
 
-// console.log(userModel);
+// this router only deals with user data exchange (CRUD)
 
 // the full get route is /api/user/create
 // the string /api/user/ comes from server.js setting. when we use the router, we prefix it !!!
@@ -27,6 +27,17 @@ router.post("/create", (req, res) => {
     })
 });
 
+router.get("/all", (req, res) => {
+  userModel.find().then(users => {
+    res.send(users);
+  }).catch(dbErr => {
+    res.send(dbErr);
+  });
+});
+
+module.exports = router;
+
+
 // router.post("/create", (req, res) => {
 //   userModel
 //     .create(req.body)
@@ -50,13 +61,3 @@ router.post("/create", (req, res) => {
 //       });
 //     });
 // });
-
-router.get("/all", (req, res) => {
-  userModel.find().then(users => {
-    res.send(users);
-  }).catch(dbErr => {
-    res.send(dbErr);
-  })
-});
-
-module.exports = router;

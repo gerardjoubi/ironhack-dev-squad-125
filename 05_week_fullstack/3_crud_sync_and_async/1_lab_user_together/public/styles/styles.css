@@ -25,6 +25,25 @@ body {
     margin-top: 10px;
 }
 
+#user_board,
+#user_board td,
+#user_board th {
+  border: 1px solid darkslategray;
+  border-collapse: collapse;
+}
+#user_board thead {
+  background: darkslategray;
+  color: white;
+}
+#user_board td,
+#user_board th {
+  text-align: center;
+  padding: 10px;
+}
+#user_board tr:nth-child(even) {
+  background: #5c7373b8;
+  color: white;
+}
 .btn {
   cursor: pointer;
   max-width: 120px;
