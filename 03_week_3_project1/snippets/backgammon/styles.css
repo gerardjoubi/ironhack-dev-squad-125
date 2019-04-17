@@ -1,0 +1,84 @@
+/**
+
+TOOLS / 
+https://bennettfeely.com/clippy/
+
+RESSOURCES / 
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+**/
+
+* {
+  box-sizing: border-box;
+}
+
+#board {
+  padding: 60px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, minmax(100px, 100px));
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 90px;
+  /* grid-template-columns: repeat(24, 60px); */
+}
+
+#board .col:nth-child(13) {
+  grid-row: 2;
+}
+
+#board .col {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#board .col:nth-child(-n+13) {
+  flex-direction: column;
+}
+#board .col:nth-child(n+13) {
+  flex-direction: column-reverse;
+}
+#board .col:nth-child(-n+12)::before {
+  transform: rotate(180deg);
+}
+#board .col::before {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+#board .col:nth-child(even)::before {
+  background: #3d9970;
+}
+
+#board .col:nth-child(odd)::before {
+  background: #001f3f;
+}
+
+.checker {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  border: 2px solid;
+  overflow: hidden;
+}
+
+.checker.is-selected {
+  border: 5px solid #39cccc;
+}
+
+.checker.white {
+  background: white;
+  border: 1px solid #111111;
+}
+
+.checker.black {
+  background: #111111;
+  border: 1px solid white;
+}
