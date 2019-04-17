@@ -1,0 +1,21 @@
+https://www.youtube.com/watch?v=IwpBluLjynI
+https://nodeschool.io/
+
+
+------beginners
+javascripting / begin
+learn you node / a basic
+----------
+tower of babel / es6, new syntax
+planet proto /
+stream adventure / flux stream and more 
+functionnal javascript / fun fun functions
+count to 6 / 
+scope chains & closures / 
+regex adventure / 
+promise won't hurt you/
+
+etc...
+
+////
+learn you react + react server side

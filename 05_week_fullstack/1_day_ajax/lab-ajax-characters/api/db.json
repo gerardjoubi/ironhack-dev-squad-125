@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "test name",
+      "occupation": "test occupation",
+      "cartoon": "on",
+      "weapon": "test weapon",
+      "id": 5
+    },
+    {
+      "name": "test nameeee",
+      "occupation": "test occupation",
+      "cartoon": "on",
+      "weapon": "test weapon",
+      "id": 6
+    },
+    {
+      "name": "test name",
+      "occupation": "test occupation",
+      "cartoon": "on",
+      "weapon": "test weapon",
+      "id": 7
+    }
+  ]
+}

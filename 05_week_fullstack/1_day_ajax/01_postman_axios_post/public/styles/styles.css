@@ -1,0 +1,39 @@
+@import url("http://overpass-30e2.kxcdn.com/overpass.css");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: overpass;
+  padding: 20px;
+}
+
+#add_product {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+#add_product input {
+  border-radius: 0.3rem;
+  outline: none;
+  border: 1px solid grey;
+  height: 28px;
+  padding-left: 20px;
+}
+
+.btn {
+  border: 1px solid grey;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin: 10px 0 10px;
+  max-width: 120px;
+  padding: 7px;
+}
+
+#add_product .btn:hover {
+    background: gray;
+    color: white;
+}

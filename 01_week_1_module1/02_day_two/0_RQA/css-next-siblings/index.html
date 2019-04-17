@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>IH-125 | CSS Siblings</title>
+    <style>
+      body {
+        font-family: Avenir;
+      }
+      .student.details {
+      }
+      .students.list ~ .student.details {
+        color: dodgerblue;
+      }
+      /* here, the rule order matters : try to move it before previous rule ... */
+      .students.list + .student.details {
+        color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- below: EMMET SNIPPET -->
+    <!-- (ul.students.list>li.student*3)+(p.student.details) -->
+    <ul class="students list">
+      <li class="student">Jill Foo</li>
+      <li class="student">Emmy Bar</li>
+      <li class="student">Billy Baz</li>
+    </ul>
+    <p class="student details">
+      I'm Jill Foo, age 22
+    </p>
+    <p class="student details">
+      I'm Billy Baz, age 32
+    </p>
+    <p class="student details">
+      I'm Emmy Bar, age 43
+    </p>
+    <div id="divider">IM THE DIVIDER => NOFX ON the ~ selector</div>
+    <p class="student details">
+      I'm Emmy Bar, age 43
+    </p>
+    <!-- <div class="bad-idea">
+      <p class="student details">
+        here, .bad-idea avoid .details selection
+      </p>
+    </div> -->
+  </body>
+</html>

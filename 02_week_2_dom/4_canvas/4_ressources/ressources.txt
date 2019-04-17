@@ -1,0 +1,48 @@
+
+# canvas basics tutorials
+https://www.youtube.com/watch?v=eL1X8urHJmA
+https://www.youtube.com/watch?v=SNHHUmDWltU
+https://www.youtube.com/watch?v=LGnwxF-RC50
+
+
+# create a jumping character
+http://www.williammalone.com/articles/create-html5-canvas-javascript-game-character/1/
+http://www.williammalone.com/articles/create-html5-canvas-javascript-game-character/2/
+
+
+# "The Easiest Guide to Create Canvas Tiles in JavaScript"
+https://www.youtube.com/watch?v=woOcqM_nEc0
+
+# creating image sprites !
+http://www.williammalone.com/articles/create-html5-canvas-javascript-sprite-animation/
+
+
+# mdn essential functions
+https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect
+
+# mdn tutorials
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial
+https://developer.mozilla.org/en-US/docs/Games/Techniques/Tilemaps
+
+# pacman project at berkley u
+http://ai.berkeley.edu/project_overview.html
+
+# refresh canvas
+http://atomicrobotdesign.com/blog/web-development/html5-canvas-you-dont-always-have-to-clear-the-entire-thing/
+
+
+#misc ressources 
+https://js13kgames.github.io/resources/
+https://www.htmlgoodies.com/html5/client/the-complete-guide-to-building-html5-games-with-canvas-svg.html
+
+#untested: infinite canvas
+https://github.com/Azeirah/infinite-canvas
+
+# images and pixel art
+https://opengameart.org/
+https://giphy.com/
+
+# librairies
+http://brm.io/matter-js/
+http://www.pixijs.com/
+https://w3c.github.io/gamepad/

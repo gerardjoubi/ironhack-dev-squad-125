@@ -1,0 +1,22 @@
+domain/field ... like sport/cooking/fashion/
+--------------------------------------------------------------------
+subject :  what's up ? what is it about ? (try to be concise)
+--------------------------------------------------------------------
+main question: what's my app for, what problem is it supposed to solve ???
+--------------------------------------------------------------------
+hypothesis:
+- my website will be able to connect food lovers through video content
+
+--------------------------------------------------------------------
+---------------------      example      ----------------------------
+--------------------------------------------------------------------
+
+domain: sport / urban
+subject: skateboard tutorials
+
+main question : how can my app improve skateboard tips sharing amongst young skater communities worldwide
+
+hypthesis: 
+- youtube is widely used for this task so i may benefit using their api 
+- video is better than text for this subject so i'll focus on this media 
+- ....
