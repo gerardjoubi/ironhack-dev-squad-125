@@ -15,8 +15,8 @@ function createNode(nodeName, parentNode, options) {
   return parentNode.appendChild(newNode);
 }
 
-var p = byId("myparagraph");
-var titles = $$(".title");
+const p = byId("myparagraph");
+const titles = $$(".title");
 console.log(p, titles);
 
 const el = createNode("div", $$("body"), {
