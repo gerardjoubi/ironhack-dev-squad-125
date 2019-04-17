@@ -1,5 +1,5 @@
 body {
-    padding: 40px;
+  padding: 40px;
 }
 
 #form_create_user {
@@ -17,33 +17,43 @@ body {
 #form_create_user select {
   border: 1px solid darkslategray;
   border-radius: 0.3rem;
-  height: 28px;
   margin-bottom: 8px;
+    height: 35px;
 }
 
 #form_create_user .btn {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #user_board,
-#user_board td,
-#user_board th {
+#user_board .cell {
   border: 1px solid darkslategray;
   border-collapse: collapse;
 }
-#user_board thead {
+#user_board .head {
   background: darkslategray;
   color: white;
 }
-#user_board td,
-#user_board th {
+
+#user_board .cell {
   text-align: center;
-  padding: 10px;
+  padding: 5px 10px;
 }
-#user_board tr:nth-child(even) {
+
+#user_board .btn {
+  margin: auto;
+  height: 20px;
+}
+
+#user_board .row:nth-child(even) {
   background: #5c7373b8;
   color: white;
 }
+
+#user_board .row-empty {
+  text-align: center;
+}
+
 .btn {
   cursor: pointer;
   max-width: 120px;
@@ -54,16 +64,45 @@ body {
   border-radius: 0.4rem;
   border: 1px solid darkslategray;
 }
+
 .btn:hover {
   background: darkslategray;
+  border: 1px solid transparent;
   color: white;
-  height: 32px;
+  outline: none;
 }
 
+#nav_dashboard {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#nav_dashboard .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid darkslategray;
+  height: 42px;
+  width: 65px;
+  padding: 4px;
+  margin-right: 10px;
+  border-radius: 0.3rem;
+}
+
+.msg.success,
 .msg.error {
-  color: red;
+  padding: 10px;
+  border-radius: .4rem;
+  margin: 20px 0;
+}
+.msg.error {
+  background: #ff4136;
+  color: hsla(3, 100%, 25%, 1);
 }
 
 .msg.success {
-  color: green;
+  background: #2ecc40;
+  color: hsla(127, 63%, 15%, 1);
 }
+
