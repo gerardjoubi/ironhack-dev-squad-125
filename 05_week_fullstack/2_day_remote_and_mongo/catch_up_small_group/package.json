@@ -1,0 +1,18 @@
+{
+  "name": "catch_up_small_group",
+  "version": "1.0.0",
+  "description": "a small app for a better understanding",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./server.js -e js,hbs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.4",
+    "mongoose": "^5.5.1"
+  }
+}

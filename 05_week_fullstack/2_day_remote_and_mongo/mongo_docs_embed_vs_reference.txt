@@ -1,0 +1,31 @@
+collection USERS =>
+user = {
+    _id: 12341235367
+    name: "gui",
+    age: 38,
+    email: "g@g.g",
+    whishlist [
+        {id: ObjectId(120000045236367)},
+        {id: ObjectId(120000045236367)},
+        {id: ObjectId(120000045236367)},
+    ]
+}
+
+collection shopcart =>
+shopcart =  {
+    _id: 1234145236367,
+    userId: ObjectId(12341235367),
+    products: [
+        {id: ObjectId(120000045236367)},
+        {id: ObjectId(120000045236367)},
+        {id: ObjectId(120000045236367)},
+    }
+]
+
+collection product =>
+product =  {
+    _id: 120000045236367,
+    name: "sneakers",
+    price: 120
+]
+
