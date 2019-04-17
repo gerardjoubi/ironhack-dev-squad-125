@@ -1,10 +1,13 @@
 const express = require("express");
 const app = express();
 const hbs = require("hbs");
-// const bodyParser = require("body-parser"); // mind later ...
+const bodyParser = require("body-parser");
 
 // public folder for static assets (styles, images, browser scripts)
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded()); // mandatory to parse the body of post request !
+app.use(bodyParser.json()); // mandatory to parse the body of post request !
+
 // setup folder for view rendering
 app.set("views", __dirname + "/views");
 // our express app uses now hbs as default engine to render views ...
@@ -12,9 +15,9 @@ app.set("view engine", "hbs");
 // setup hbs folder for partial views (small dynamic html modules)
 
 hbs.registerPartials(__dirname + "/views/partials");
-// app.use(bodyParser()); // mind later ...
- // create a frontend (in public...) @ click on a button, make the studentList disappear... :)
+// create a frontend (in public...) @ click on a button, make the studentList disappear... :)
 // first get route (index, home...)
+
 app.get("/", (req, res) => {
   const data = {
     yang: "hello squad",
@@ -48,14 +51,13 @@ app.get("/about", (req, res) => {
   res.render("about", data);
 });
 
+
 // third get route sends a contact form back to browser
 app.get("/contact", (req, res) => {
-  console.log(req.query)
+  // console.log(req.query)
+  // console.log(req.query.name, req.query.message)
   const data = {
-    title: "Contact",
-    students: [
-      {name: "toto"}
-    ]
+    title: "Contact"
   };
   res.render("contact", data);
 });
@@ -63,13 +65,17 @@ app.get("/contact", (req, res) => {
 // ***********************
 // lil' post adventure
 // ***********************
+app.post("/contact", (req, res) => {
+  // console.log(req.query)
+  // console.log("posted data: ", req.body)
+  const {name, email, subject, message } = req.body; // es6 destructuring syntax ;)
+  console.log(name, subject, message); // we took values out of req.body and assigned them to separate var for later use...
+  res.status(200).send("little post adventure will continue ;)");
+});
 
-// app.post("/contact", (req, res) => {
-//   console.log("ola", req.body)
-//   // const {name, email, subject, message } = req.body;
-//   // console.log(name, subject, message)
-//   res.status(200).send()
-// });
+app.get("/user/:username", (req, res, next) => {
+  res.send(req.params);
+});
 
 const listener = app.listen(7780, () => {
   console.log("app/hbs started @ http://localhost:" + listener.address().port);

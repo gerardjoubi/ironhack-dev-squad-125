@@ -1,8 +1,11 @@
 {{> head }}
 {{> navbar }}
+
+{{!-- http://localhost:7780/contact?name=test+name&email=test%40test.com&subject=support&message=test+message --}}
+
 <h1 class="title">{{title}}</h1>
 <form id="form_contact" action="contact" class="form">
-    {{!-- <form id="form_contact" method="post" action="contact" class="form"> --}}
+{{!-- <form id="form_contact" method="post" action="contact" class="form"> --}}
     <label for="name" class="label">name</label>
     <input id="name" type="text" name="name" class="input" value="test name" required>
     <label for="email" class="label">email</label>
