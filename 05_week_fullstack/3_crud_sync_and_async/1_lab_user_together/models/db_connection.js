@@ -12,7 +12,7 @@ mongoose.connection.on("error", () => {
 
 module.exports = connection;
 
-// just a reminder on evens  ... :) 
+// just a reminder on events  ... :) 
 // btn.addEventListener("click", function() {
 
 // })
