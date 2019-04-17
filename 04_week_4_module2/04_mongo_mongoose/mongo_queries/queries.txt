@@ -1,0 +1,45 @@
+-----------------------------------------------
+                    QUERIES
+-----------------------------------------------
+#1
+{ name : "Babelgum"}
+-----------------------------------------------
+#2
+filter: { number_of_employees: { $gt : 5000 } }
+sort  : { number_of_employees: 1 }
+limit : 20
+-----------------------------------------------
+#3
+filter : { $and: [ { founded_year : { $gte  : 2000 }} , { founded_year: { $lte: 2005 } } ] }
+project: {name: 1, founded_year: 1}
+-----------------------------------------------
+#4
+filter: { $and : [ { founded_year: { $lt: 2010  }   }, { "ipo.valuation_amount": { $gt: 1000000 }  }  ] }
+project: {ipo: 1, name: 1 }
+-----------------------------------------------
+#5
+filter: { $and:  [ { number_of_employees: { $lt: 1000} }, {founded_day: { $lt: 2005 }  } ] }
+sort: { number_of_employees: 1 }
+-----------------------------------------------
+#6
+{ partners: { $exists: false } }
+-----------------------------------------------
+#7
+{ category_code : { $eq: null }}
+-----------------------------------------------
+#8
+filter  :  { $and : [ { number_of_employees: { $gt: 100 } }, { number_of_employees: { $lt: 1000 } }    ] } 
+project : {name: 1, number_of_employees: 1 }
+-----------------------------------------------
+#9
+{ "ipo.valuation_amount": -1 }
+-----------------------------------------------
+#10 Retrieve the 10 companies with more employees, order by the number of employees
+sort :  { number_of_employees : -1  }
+limit: 10
+-----------------------------------------------
+# 11
+filter: { founded_month: { $gte: 7 }}
+limit: 1000
+-----------------------------------------------
+#13
