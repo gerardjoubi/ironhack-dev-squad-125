@@ -1,0 +1,19 @@
+<h1 class="title">Dashboard</h1>
+<p>
+    a dashboard is a control panel for your app !
+</p>
+<nav id="nav_dashboard">
+    <a href="/dashboard/create-user" class="link">
+        <i class="fa fa-plus fa-lg"></i>
+    </a>
+    <a href="/dashboard/list-users" class="link">
+        <i class="fa fa-list fa-lg"></i>
+    </a>
+</nav>
+{{#if isForm}}
+form page
+{{>userForm}}
+{{/if}}
+{{#if isBoard}}
+board page
+{{/if}}
