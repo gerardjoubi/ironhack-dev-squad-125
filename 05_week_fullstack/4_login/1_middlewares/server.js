@@ -30,7 +30,7 @@ function registerLog(req, res, next) {
    });
 }
 
-app.use(nodeRocks);
+// app.use(nodeRocks);
 
 app.get("/", (req, res) => {
     res.redirect("a");
