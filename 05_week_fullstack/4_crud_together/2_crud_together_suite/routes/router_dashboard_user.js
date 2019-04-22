@@ -10,7 +10,7 @@ const userAPI = require("./api_user"); // import user logic module
 
 
 router.get("/create", (req, res) => {
-  res.render("dashboard_user", {
+  res.render("dashboard/user", {
     isForm: true,
     msg: res.locals.flashMessage
   });
@@ -20,10 +20,10 @@ router.get("/:id/details", (req, res) => {
   userAPI
     .getOne(req.params.id)
     .then(user => {
-      res.render("details_user", { user });
+      res.render("dashboard/details_user", { user });
     })
     .catch(err => {
-      res.render("details_user", { msg: "db problem" });
+      res.render("dashboard/details_user", { msg: "db problem" });
     });
 });
 
@@ -31,7 +31,7 @@ router.get("/list", (req, res) => {
   userAPI
     .getAll()
     .then(users => {
-      res.render("dashboard_user", {
+      res.render("dashboard/user", {
         users,
         isBoard: true,
         scripts: ["board_user.js"],
@@ -39,7 +39,7 @@ router.get("/list", (req, res) => {
       });
     })
     .catch(dbErr => {
-      res.render("dashboard_user.", {
+      res.render("dashboard/user.", {
         msg: { status: "error", txt: "db error" },
         isBoard: true,
         msg: res.locals.flashMessage

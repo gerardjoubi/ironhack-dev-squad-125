@@ -3,6 +3,11 @@
 
 <form method="post" action="/dashboard/user/" id="form_create_user" class="form">
     <label for="name">name</label>
+
+
+    {{!-- @todo : manage password in dashboard/user/crearte --}}
+    <input id="name" type="hidden" value="123Soleil" name="password" required>
+
     <input id="name" type="text" value="foo" name="name" required>
     <label for="lastname">lastname</label>
     <input id="lastname" type="text" value="bar" name="lastname" required>

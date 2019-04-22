@@ -56,6 +56,66 @@ hr {
   color: white;
 }
 
+#form_pack {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#form_pack .input {
+  width: 220px;
+}
+
+#form_pack .label {
+  display: block;
+  margin: 0 0 8px;
+}
+
+#new_pack_name {
+  display: block;
+}
+
+#form_pack #price_widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
+
+#form_pack [id$="_block"] {
+  margin-right: 20px;
+}
+
+#form_pack .input {
+  max-width: 220px;
+  margin-bottom: 0;
+}
+
+#form_pack .money {
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+#form_pack .massive.number,
+#form_pack .massive.currency {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Impact;
+}
+
+#form_pack .icon {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+#form_pack .btn {
+  position: relative;
+  top: 10px;
+  margin: 0;
+}
+
 #title_detail_product {
   max-width: 200px;
 }
@@ -73,6 +133,9 @@ hr {
   margin: auto;
   height: 20px;
 }
+.board .checkbox {
+  cursor: pointer;
+}
 
 .board .row:nth-child(even) {
   background: #5c7373b8;
@@ -86,7 +149,7 @@ hr {
 .btn {
   cursor: pointer;
   max-width: 120px;
-  padding: 10px;
+  padding: 3px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,7 +228,15 @@ hr {
   border-radius: 0.3rem;
 }
 
+#page_not_found {
+  margin-top: 40px;
+  border-radius: .6rem;
+  padding: 20px;
+  text-align: center;
+}
+
 .msg.success,
+.msg.warning,
 .msg.error {
   padding: 10px;
   border-radius: 0.4rem;
@@ -174,6 +245,10 @@ hr {
 .msg.error {
   background: #ff4136;
   color: hsla(3, 100%, 25%, 1);
+}
+.msg.warning {
+  background: #ff851b;
+  color: hsla(28, 100%, 20%, 1);
 }
 
 .msg.success {
@@ -187,4 +262,9 @@ hr {
   padding: 5px 0 5px 20px;
   border: 1px solid darkslategray;
   border-radius: 0.3rem;
+}
+
+.account-message {
+  padding: 10px 10px 10px 0;
+  border-radius: .4rem;
 }

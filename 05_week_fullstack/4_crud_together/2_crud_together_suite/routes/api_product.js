@@ -1,7 +1,6 @@
 const express = require("express");
 const router = new express.Router();
 const productModel = require("./../models/product");
-const categoryAPI = require("./api_category");
 
 // ------------------------------------------------------
 // this router only deals with product data exchange (CRUD)
@@ -16,7 +15,11 @@ const create = (data) => productModel.create(data);
 
 const getAll = () => productModel.find().populate("category");
 
-const getOne = id => productModel.findById({ _id: id }).populate("category");
+const getSome = (ids) => productModel.find({
+  "_id": { $in: [...ids]}
+}).populate("category");
+
+const getOne = id => productModel.findById(id).populate("category");
 
 const deleteOne = (id) => productModel.findOneAndDelete({ _id: id });
 
@@ -61,7 +64,8 @@ module.exports = {
   create,
   deleteOne,
   getAll,
+  getSome,
   getOne,
   updateOne,
-  router,
+  router
 };

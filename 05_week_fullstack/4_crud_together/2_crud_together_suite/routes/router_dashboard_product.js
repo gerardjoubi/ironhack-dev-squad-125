@@ -9,13 +9,9 @@ const categoryAPI = require("./api_category"); // import product logic module
           router prefix: /dashboard/product/
 ------------------------------------------------------- */
 
-router.get("/dashboard", (req, res) => {
-  res.render("dashboard");
-});
-
 router.get("/create", (req, res) => {
   categoryAPI.getAll().then(categories => {
-    res.render("dashboard_product", {
+    res.render("dashboard/product", {
       isForm: true,
       categories,
       action: "/dashboard/product/create",
@@ -25,43 +21,71 @@ router.get("/create", (req, res) => {
   });
 });
 
-router.get("/:id/edit", (req, res) => {
-  productAPI
-    .getOne(req.params.id)
-    .then(product => {
-        categoryAPI.getAll().then(categories => {
-          res.render("details_product", {
-            product,
-            categories,
-            action: `/dashboard/product/edit/${product.id}`,
-            title: "Edit this product",
-            scripts: ["form_product_edit.js"],
-            msg: res.locals.flashMessage
-          });
-        });
-    })
-    .catch(err => res.render("details_product", { msg: "db problem" }));
-});
-
 router.get("/list", (req, res) => {
   productAPI
     .getAll()
     .then(products => {
-      res.render("dashboard_product", {
+      res.render("dashboard/product", {
+        action: "/dashboard/pack/create",
         products,
         isBoard: true,
         msg: res.locals.flashMessage
       });
     })
     .catch(dbErr => {
-      res.render("dashboard_product", {
+      res.render("dashboard/product", {
         isBoard: true,
         msg: res.locals.flashMessage
       });
     });
 });
 
-router.post("/", (req, res) => {
+router.get("/edit/:id/", (req, res) => {
+  productAPI
+    .getOne(req.params.id)
+    .then(product => {
+      categoryAPI.getAll().then(categories => {
+        res.render("dashboard/details_product", {
+          product,
+          categories,
+          action: `/dashboard/product/edit/${product.id}`,
+          title: `Edit product (${product._id})`,
+          scripts: ["form_product_edit.js"],
+          msg: res.locals.flashMessage
+        });
+      });
+    })
+    .catch(err => {
+      res.render("dashboard/details_product", {
+        msg: {
+          txt: "db problem",
+          status: "error"
+        }
+      });
+    });
+});
+
+router.get("/delete/:id", (req, res) => {
+  productAPI
+    .deleteOne(req.params.id)
+    .then(dbRes => {
+      req.session.flashMessage = {
+        txt: "Yay ! product deleted successfully",
+        status: "success"
+      };
+      res.redirect("/dashboard/product/list");
+    })
+    .catch(dbErr => {
+      req.session.flashMessage = {
+        txt: "Nay ! A problem occured while deleting the product",
+        status: "error",
+        detail: dbErr._message
+      };
+      res.redirect("/dashboard/product/list");
+    });
+});
+
+router.post("/create", (req, res) => {
   productAPI
     .create(req.body)
     .then(dbSuccess => {
@@ -84,41 +108,20 @@ router.post("/", (req, res) => {
 router.post("/edit/:id", (req, res) => {
   productAPI
     .updateOne(req.params.id, req.body)
-    .then(dbRes => {
-      console.log(dbRes)
+    .then(() => {
       req.session.flashMessage = {
         txt: "Yay ! product edited successfully",
         status: "success"
       };
-      res.redirect(`/dashboard/product/${req.params.id}/edit`);
+      res.redirect(`/dashboard/product/edit/${req.params.id}`);
     })
     .catch(dbErr => {
       req.session.flashMessage = {
-        txt: "database error",
-        status: "Oh no ! A database error occured while editing the product",
+        txt: "Oh no ! A database error occured while editing the product",
+        status: "error",
         detail: dbErr._message
       };
-      res.redirect("/dashboard/product/list");
-    });
-});
-
-router.get("/delete/:id", (req, res) => {
-  productAPI
-    .deleteOne(req.params.id)
-    .then(dbRes => {
-      req.session.flashMessage = {
-        txt: "Yay ! product deleted successfully",
-        status: "success"
-      };
-      res.redirect("/dashboard/product/list");
-    })
-    .catch(dbErr => {
-      req.session.flashMessage = {
-        txt: "database error",
-        status: "Oh no ! A database error occured while deleting the product",
-        detail: dbErr._message
-      };
-      res.redirect("/dashboard/product/list");
+      res.redirect(`/dashboard/product/edit/${req.params.id}`);
     });
 });
 

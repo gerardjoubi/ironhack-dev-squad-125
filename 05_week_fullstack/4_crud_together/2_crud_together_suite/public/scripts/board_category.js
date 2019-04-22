@@ -4,8 +4,6 @@ const addBtn = document.getElementById("btn_create_category");
 const board = document.querySelector("#board_category .body");
 const url = "http://localhost:3434/api/category";
 
-console.log(searchBox, addBtn, board);
-
 function appendCategoryToDOM(name, id) {
   function render(strings, value) {
     return `

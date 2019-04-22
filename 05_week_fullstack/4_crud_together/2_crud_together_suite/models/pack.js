@@ -5,14 +5,16 @@ const productsPackSchema = new Schema({
     type: String,
     required: true
   },
-  products: [
+  products:[
     {
-      product: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product"
-      }
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Product"
     }
-  ]
+  ],
+  price: {
+    type: Number,
+    required: true
+  }
 });
 
 const productsPackModel = mongoose.model("ProductPack", productsPackSchema);
