@@ -2,12 +2,12 @@ const express = require("express"); // import express in this module
 const router = new express.Router(); // create an app sub-module (router)
 const userAPI = require("./api_user"); // import user logic module
 
+
 /* ------------------------------------------------------
           this router only serves pages !!! 
           some routes interact with our userAPI
           router prefix: /dashboard/user/
 ------------------------------------------------------- */ 
-
 
 router.get("/create", (req, res) => {
   res.render("dashboard/user", {
@@ -34,7 +34,6 @@ router.get("/list", (req, res) => {
       res.render("dashboard/user", {
         users,
         isBoard: true,
-        scripts: ["board_user.js"],
         msg: res.locals.flashMessage
       });
     })

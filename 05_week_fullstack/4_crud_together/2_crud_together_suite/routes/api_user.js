@@ -11,18 +11,15 @@ const userModel = require("../models/user");
 // ex: router.get("/all") === router.get("/api/user/all");
 // -------------------------------------------------------
 
-const create = (data) => {
-  console.log(data)
-  return userModel.create(data);
-}
+const create = (data) => userModel.create(data);
 
 const getAll = () => userModel.find();
 
 const getOne = (id) => userModel.findById(id);
 
-const getBy = data => userModel.findOne(data);
+const getBy = filter => userModel.findOne(filter);
 
-const deleteOne = (id) => userModel.findOneAndDelete(id);
+const deleteOne = (id) => userModel.findOneAndDelete({ _id: id });
 
 const updateOne = id => '@todo update user';
 

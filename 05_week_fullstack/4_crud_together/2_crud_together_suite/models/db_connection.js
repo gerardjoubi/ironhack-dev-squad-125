@@ -5,12 +5,8 @@ const connection = mongoose.connect("mongodb://localhost/crud-together", {
   useCreateIndex: true
 });
 
-mongoose.connection.on("connected", () => {
-  console.log("yay mongodb connected :)");
-});
+mongoose.connection.on("connected", () => console.log("yay mongodb connected :)"));
 
-mongoose.connection.on("error", () => {
-  console.log("nay db error sorry :(");
-});
+mongoose.connection.on("error", () => console.log("nay db error sorry :("));
 
 module.exports = connection;

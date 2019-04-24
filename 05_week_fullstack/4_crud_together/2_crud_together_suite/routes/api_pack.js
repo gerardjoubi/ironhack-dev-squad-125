@@ -20,9 +20,10 @@ const getOne = id => packModel.findById(id).populate("products");
 const deleteOne = id => packModel.findOneAndDelete({ _id: id });
 
 const updateOne = (id, data) => packModel.findOneAndUpdate({ _id: id }, { ...data });
-// updateOne() above uses spread operator on ...data 
+// updateOne() above uses spread operator on ...data argument (an object)
 // to create as many key:value pairs as contained in data object
-// just a shortcurt instead of declaring : {name, price, products} , etc.
+// just a shortcurt instead of declaring : 
+// {name: data.name, price: data.price, products: data.products} , etc.
 
 
 // insert one pack in database

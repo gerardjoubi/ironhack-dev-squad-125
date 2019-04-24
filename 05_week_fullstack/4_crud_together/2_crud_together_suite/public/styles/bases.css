@@ -27,6 +27,10 @@ ul {
   align-items: center;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .columns,
 .rows {
   display: flex;
