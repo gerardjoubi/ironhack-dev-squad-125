@@ -19,8 +19,10 @@ router.get("/about", (req, res) => {
   res.render("about"); // render the html out of this .hbs template file
 });
 
+// important => must ensureLogin to protect private pages !!!
 router.get("/dashboard", ensureLogin, (req, res) => {
-  res.render("dashboard/index");
+  console.log(req.user)
+  res.render("dashboard/index", {user: req.user});
 });
 
 
