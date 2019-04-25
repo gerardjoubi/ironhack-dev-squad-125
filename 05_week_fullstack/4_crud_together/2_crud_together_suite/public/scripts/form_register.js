@@ -8,8 +8,8 @@ iconAvatar.onclick = function displayFileBox() {
 };
 
 iconReveal.onclick = function reavealPassword() {
-  icon.classList.toggle("fa-eye");
-  icon.classList.toggle("fa-eye-slash");
+  iconReveal.classList.toggle("fa-eye");
+  iconReveal.classList.toggle("fa-eye-slash");
   inputPassword.type = icon.classList.contains("fa-eye-slash")
     ? "text"
     : "password";
