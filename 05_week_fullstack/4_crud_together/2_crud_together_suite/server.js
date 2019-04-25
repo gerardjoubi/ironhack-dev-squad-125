@@ -1,4 +1,5 @@
 require("dotenv").config(); // get env variable for easy dev AND deployment
+require("./config/cloudinary"); // get env variable for easy dev AND deployment
 require("./models/db_connection"); // database initial setup
 require("./utils/hbs_helpers"); // custom functions adding usefull features to hbs templates
 
@@ -15,9 +16,11 @@ const flash = require("connect-flash");
 
 // CUSTOM MIDDLEWARE (must be placed before app.routers)
 // check if user is logged in... used for display purposes in hbs templates
+// this function must be declared before the session setup
 function checkloginStatus(req, res, next) {
-  res.locals.isLoggedIn = req.isAuthenticated();
-  res.locals.user = req.user;
+  res.locals.isLoggedIn = req.isAuthenticated(); // {{isLoggedIn}} in .hbs
+  res.locals.user = req.user; // {{user}} in .hbs
+  // console.log(req);
   next();
 }
 
