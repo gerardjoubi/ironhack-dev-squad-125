@@ -109,7 +109,7 @@ router.post("/edit/:id", (req, res) => {
   productAPI
     .updateOne(req.params.id, req.body)
     .then(() => {
-      req.session.flashMessage = {
+      req.session.flashMessage = { // this message will be accessible for one redirection 
         txt: "Yay ! product edited successfully",
         status: "success"
       };
