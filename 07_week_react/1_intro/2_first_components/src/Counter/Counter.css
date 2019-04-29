@@ -1,0 +1,12 @@
+.counter {
+  font-weight: bold;
+}
+
+
+.counter .success {
+  color: darkgreen;
+}
+
+.counter .danger {
+  color: firebrick;
+}
