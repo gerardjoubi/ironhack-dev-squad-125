@@ -2,7 +2,7 @@ const searchBox = document.getElementById("search_category_input");
 const formInput = document.getElementById("cat_name");
 const addBtn = document.getElementById("btn_create_category");
 const board = document.querySelector("#board_category .body");
-const url = "http://localhost:3434/api/category";
+const url = document.getElementById("site_url").content + "/api/category";
 
 function appendCategoryToDOM(name, id) {
   function render(strings, value) {
