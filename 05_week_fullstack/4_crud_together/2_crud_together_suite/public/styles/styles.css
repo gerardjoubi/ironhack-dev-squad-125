@@ -6,6 +6,31 @@ hr {
   margin: 10px 0 20px;
 }
 
+.profile {
+  display: flex;
+  max-width: 50vh;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.profile .avatar {
+  height: 100px;
+  width: 100px;
+  border-width: 3px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.profile .greetings {
+  border: 1px solid;
+  border-radius: 0.4rem;
+  padding: 10px;
+}
+
 .text-block {
   max-width: 50vw;
 }
@@ -237,7 +262,7 @@ hr {
 
 #page_not_found {
   margin-top: 40px;
-  border-radius: .6rem;
+  border-radius: 0.6rem;
   padding: 20px;
   text-align: center;
 }
@@ -273,5 +298,5 @@ hr {
 
 .account-message {
   padding: 10px 10px 10px 0;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
