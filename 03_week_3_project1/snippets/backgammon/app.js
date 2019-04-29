@@ -23,7 +23,7 @@ function drawBoardGame() {
     let col = document.createElement("div");
     col.className = "col";
     col.setAttribute("data-column", i + 1);
-    col.ondragover = evt => evt.preventDefault(); //
+    col.ondragover = evt => evt.preventDefault(); // mandatory 
     col.ondrop = handleCheckerDrop;
     board.appendChild(col);
   }
