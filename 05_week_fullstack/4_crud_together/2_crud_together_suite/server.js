@@ -1,10 +1,12 @@
 require("dotenv").config(); // get env variable for easy dev AND deployment
 require("./config/cloudinary"); // get env variable for easy dev AND deployment
-require("./models/db_connection"); // database initial setup
+require("./config/db_connection"); // database initial setup
 require("./utils/hbs_helpers"); // custom functions adding usefull features to hbs templates
 
 const express = require("express"); // import this node framework
 const app = express(); // execute express and get an app out of it !
+app.locals.site_url = process.env.SITE_URL; // used in front end to perform ajax request on a url var instead of hardcoding it
+
 const bodyParser = require("body-parser"); // middleware to get data out of http requests body
 const hbs = require("hbs"); // template engine import
 
@@ -31,7 +33,7 @@ app.use(
     store: sessionStore,
     saveUninitialized: true,
     resave: true,
-    secret: "mySüperS3cr3tSh0uüÜlB3H4rd2Cr@@@ck|"
+    secret: process.env.SESSION_SECRET
   })
 );
 
@@ -91,10 +93,8 @@ app.use(function handle404(req, res) {
   res.status(404).render("page_not_found");
 });
 
-const listener = app.listen(process.env.PORT, () => {
+const listener = app.listen(process.env.PORT || 5000, () => {
   console.log(
-    `app started at ${process.env.PROTOCOL}://${process.env.DOMAIN}:${
-      listener.address().port
-    }`
+    `app started at ${process.env.SITE_URL}`
   );
 });
