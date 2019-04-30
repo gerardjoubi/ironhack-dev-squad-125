@@ -1,0 +1,29 @@
+[
+    {
+        "name": "foo",
+        "email": "foo@foo.fr",
+        "age": 19,
+        "hobbies": [
+            "fashion",
+            "chocolate"
+        ]
+    },
+    {
+        "name": "baz",
+        "email": "baz@baz.io",
+        "age": 27,
+        "hobbies": [
+            "sport",
+            "vanilla"
+        ]
+    },
+    {
+        "name": "bar",
+        "email": "bar@bar.dev",
+        "age": 40,
+        "hobbies": [
+            "video games",
+            "banana"
+        ]
+    }
+]

@@ -1,0 +1,13 @@
+@import url('http://overpass-30e2.kxcdn.com/overpass.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'overpass';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

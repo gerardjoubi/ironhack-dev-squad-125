@@ -1,0 +1,9 @@
+.List {
+    list-style: none;
+    border: 1px solid;
+    max-width: 540px;
+    padding: 10px;
+}
+.List .item {
+    padding: 4px;
+}
