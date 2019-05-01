@@ -1,0 +1,14 @@
+#nav_main {
+    color: inherit;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background: #000;
+    padding: 10px;
+    height: 40px;
+}
+#nav_main a {
+    color: #19c4eb;
+}

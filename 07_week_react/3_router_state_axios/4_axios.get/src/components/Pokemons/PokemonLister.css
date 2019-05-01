@@ -1,0 +1,26 @@
+.list.pokemons {
+  padding: 0;
+  list-style-type: none;
+  max-width: 420px;
+}
+.list.pokemons .item {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  color: #FFF;
+}
+.list.pokemons .item a {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  color: #FFF;
+}
+.list.pokemons .item:nth-child(odd) {
+  background: #06859a;
+}
+.list.pokemons .item:nth-child(even) {
+  background: #19c4ec;
+}
