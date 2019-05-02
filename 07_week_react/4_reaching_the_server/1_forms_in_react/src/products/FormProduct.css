@@ -1,0 +1,24 @@
+#form_product {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+}
+#form_product .label {
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+#form_product .input {
+  border: 1px solid;
+  border-radius: 0.4rem;
+  height: 32px;
+  outline: none;
+}
+#form_product .btn {
+  margin-top: 20px;
+  border: 1px solid;
+  border-radius: 0.4rem;
+  height: 32px;
+  width: 120px;
+}
